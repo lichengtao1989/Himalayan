@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/player/player",
+    "pages/personal/personal",
+    "pages/listen/listen"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "喜马拉雅电台",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#ff5721", 
+    "backgroundColor": "#fff",
+    "borderStyle": "#fff",
+    "list": [{  
+      "selectedIconPath": "pages/images/tabBar/starSelect.png",  
+      "iconPath": "pages/images/tabBar/starBlur.png",  
+      "pagePath": "pages/index/index",  
+      "text": "首页"
+    },{  
+      "selectedIconPath": "pages/images/tabBar/listenSelect.png",  
+      "iconPath": "pages/images/tabBar/listenBlur.png",  
+      "pagePath": "pages/listen/listen",  
+      "text": "我听"
+    },{  
+      "selectedIconPath": "pages/images/tabBar/pauseSelect.png",  
+      "iconPath": "pages/images/tabBar/pauseBlur.png",  
+      "pagePath": "pages/player/player",  
+      "text": "播放",
+      "positon": "top",
+      "width": 600,
+      "height": 600
+    },{  
+      "selectedIconPath": "pages/images/tabBar/findSelect.png",  
+      "iconPath": "pages/images/tabBar/findBlur.png",  
+      "pagePath": "pages/index/index",  
+      "text": "发现"
+    },{  
+      "selectedIconPath": "pages/images/tabBar/loginSelect.png",  
+      "iconPath": "pages/images/tabBar/loginBlur.png",  
+      "pagePath": "pages/personal/personal",  
+      "text": "登录"
+    }] 
+  }
+}

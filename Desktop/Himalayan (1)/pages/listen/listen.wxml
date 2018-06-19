@@ -1,0 +1,96 @@
+<view class="warpper">
+  <view class="container">
+    <!-- 头部公有 -->
+    <view class="head">
+      <view class="header">
+        <view class="login">登录</view>
+        <text style="font-size: 1rem;">我听</text>
+        <image src="../images/listen/search.png" style="width: 40rpx;height: 40rpx;"></image>
+      </view>
+      <view class="lists">
+        <view class="list">
+          <image src="../images/listen/download.png"></image>
+          <text class="listT1">下载</text>
+          <text class="listT2">暂无</text>
+        </view>
+        <view class="list">
+          <image src="../images/listen/history.png"></image>
+          <text class="listT1">历史</text>
+          <text class="listT2">25</text>
+        </view>
+        <view class="list">
+          <image src="../images/listen/shoppingCart.png"></image>
+          <text class="listT1">已购</text>
+          <text class="listT2">暂无</text>
+        </view>
+        <view class="list">
+          <image src="../images/listen/heart.png"></image>
+          <text class="listT1">喜欢</text>
+          <text class="listT2">暂无</text>
+        </view>
+      </view>
+    </view>   
+    <!--我的订阅-->
+    <view class="content">
+      <view class="subscription">
+        <text class="my_sub" style="color:#fcb7a7" bindtap="handleChange" data-index="1">我的订阅</text>
+        <text class="recommend_sub" bindtap="handleChange" data-index="2">推荐订阅</text>
+        <view class="bottom-move" style="left:{{left}}rpx"></view>
+      </view>
+      <swiper class="swiper-wrapper" current="{{current}}" bindchange="swiperChange">
+        <swiper-item>
+          <view class="addSub-wrapper">
+            <image src="../images/listen/subscription.png" style="width: 320rpx;height: 310rpx;margin-top:-90rpx;"></image>
+            <text>没有订阅内容</text>
+            <view  class="addSub">
+              <image src="../images/listen/add.png" style="width: 30rpx;height: 30rpx"></image>
+              <text style="color:#333;font-weight: 600;">添加订阅</text>
+            </view>
+            <navigator url="">
+              <text>看不到已订阅的？ 请</text><text style="color:#f86442;">登录</text>
+            </navigator>
+          </view>
+          <!-- <view class="success-add-sub" style="width: 100%;height: 100%;padding: 0 20rpx;">
+            <view class="item" wx:for="{{subscription}}" wx:key="*this" >
+              <view class="hotBooks-left__image">
+                <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+              </view>
+              <view class="hotBooks-right">
+                <view class="hotBooks__title" style="color:#333;font-size: 0.8rem;">盗墓笔记 周建龙精简高音质版</view>
+                <view class="hotBooksF" style="color:#999;font-size: 0.7rem;">根据《盗墓笔记 执行力版》推荐</view>
+                <view class="detailS">
+                  <image src="../images/recommend/播放.png" class="play-icon"></image>
+                  <text>1119万</text>
+                  <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                  <text>339集</text>
+                </view>
+              </view>
+            </view>
+          </view> -->
+          
+        </swiper-item>
+        <!-- 推荐订阅 -->
+        <swiper-item>
+          <scroll-view scroll-y style="padding:0 20rpx;height: 100%;width: 100%;">
+            <view class="item" wx:for="{{subscription}}" wx:key="*this" >
+              <view class="hotBooks-left__image">
+                <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+              </view>
+              <view class="hotBooks-right">
+                <view class="hotBooks__title" style="color:#333;font-size: 0.8rem;">盗墓笔记 周建龙精简高音质版</view>
+                <view class="hotBooksF" style="color:#999;font-size: 0.7rem;">根据《盗墓笔记 执行力版》推荐</view>
+                <view class="detailS">
+                  <image src="../images/recommend/播放.png" class="play-icon"></image>
+                  <text>1119万</text>
+                  <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                  <text>339集</text>
+                  <image class="detailS-images__click" src="../images/listen/{{ arrSubscription[index] == index ? 'subscriptionClick':'unsubscriptionClick'}}.png"  catchtap="toggleSub" data-index="{{index}}"></image>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </swiper>
+    </view>  
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="head">
+      <image class="headImg left"></image>
+      <image class="headImg right"></image>
+      <image class="headImg right"></image>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="page__bd-img">
+      <view class="title">喜马拉雅独家版权</view>
+      <image class="titleImg" src=""></image>
+      <view class="titleImg-warp">
+        <image class="titleImg-num" src="../images/player/耳机.png"></image>
+        <text>174.8万</text>
+      </view>
+      <view class="icon-pop">
+        <image src="" class="left"></image>
+        <image src="" class="right"></image>
+        <image src="" class="right"></image>
+      </view>
+      <view class="progress">
+        <view class="progress-line"></view>
+        <view class="progress-onload"></view>
+        <view class="progress-control"></view>
+        <view class="progress-schedule"><text>00:00</text></view>
+        <view class="progress-end"><text>19:52</text></view>
+      </view>
+      <view class="video-control">
+        <view class="video-list">
+          <image src="../images/player/列表.png"></image>
+          <text>播放列表</text>
+        </view>
+        <view class="video-toggle">
+          <image src="../images/player/left_vedio2.png" class="video-prev"></image>
+          <view class="video-circle">
+            <image src="../images/player/暂停.png" class="{{videoCircieImageLeft}}"></image>
+          </view>
+          <image src="../images/player/right_vedio2.png" class="video-next"></image>
+        </view>
+        <view class="video-timer">
+          <image src="../images/player/闹钟.png"></image>
+          <text>定时开关</text>
+        </view>
+      </view>
+      <view class="example">
+        <image src=""></image>
+        <view class="example-title">
+          <text class="example-title-mian">法相仙途 (喜马拉雅出品)</text>
+          <text class="example-title-detail">14.2万人订阅</text>
+        </view>
+        <view class="example-right">
+          <text>订阅专辑</text>
+        </view>
+      </view>
+    </view>
+     
+  </view>
+</view>

@@ -1,0 +1,246 @@
+/* pages/player/player.wxss */
+.page {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.page__hd .head {
+  width: 100%;
+  height: 82rpx;
+  float: left;
+  padding:
+}
+.head .headImg {
+  width: 77rpx;
+  height: 77rpx;
+  background-color: #e3e4e5;
+  float: right;
+  border-radius: 50%;
+  margin:10rpx 0;
+  
+}
+.head .headImg.left {
+  float: left;
+}
+.head .headImg.right {
+  margin: 10rpx 0  0 20rpx;
+}
+/*
+  * 主体部分
+  *
+*/
+.page__bd-img {
+  position: relative;
+}
+.page__bd .title {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 10rpx 0;
+}
+.titleImg {
+  width: 567rpx;
+  height: 567rpx;
+  border-radius: 15rpx;
+  display: block;
+  margin:0 auto;
+  background-color: #e3e4e5;
+}
+.titleImg-warp {
+  position: absolute;
+  /* width:110rpx; */
+  height:40rpx;
+  top:657rpx;
+  right:95rpx;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleImg-warp .titleImg-num {
+  width: 35rpx;
+  height: 35rpx;
+}
+.titleImg-warp text {
+  font-size: 0.55rem;
+  color:#fff;
+  padding:0 0 0 10rpx;
+}
+.icon-pop {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.icon-pop image {
+  width: 45rpx;
+  height: 45rpx;
+  background-color: #e3e4e5;
+  border-radius: 5rpx;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+  margin: 10rpx 0  0 20rpx;
+}
+/*
+  * progress
+*/
+.progress{
+  display: block;
+  position: relative;
+  padding:20rpx 0;
+}
+.progress .progress-line {
+  width: 100%;
+  height: 4rpx;
+  background-color: #ccc;
+}
+.progress .progress-onload {
+  width: 50%;
+  top:20rpx;
+  height:4rpx;
+  position: absolute;
+  background-color: #999;
+  transition: all 0.3s ease;
+}
+.progress .progress-control {
+  width: 15rpx;
+  height: 29rpx;
+  position: relative;
+  top:-15rpx;
+  left: 0rpx;
+  transform: all 0.3s ease;
+  background-color: #F86440;
+  border-radius: 10rpx;
+}
+.progress .progress-schedule,
+.progress .progress-end{
+  font-size: 0.5rem;
+  color:#F86440;
+}
+.progress .progress-schedule {
+  float: left;
+}
+.progress .progress-end {
+  float: right;
+}
+/*
+  * 播放器控制
+  *
+*/
+.video-control {
+  width: 100%;
+  display: block;
+  height:123rpx;
+  margin-top:10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-control .video-list,
+.video-control .video-timer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 120rpx;
+}
+.video-control .video-list text,
+.video-control .video-timer text {
+  font-size: 0.5rem;
+  color:#bebebe;
+  text-align: center;
+}
+.video-control .video-list image,
+.video-control .video-timer image{
+  width: 45rpx;
+  height: 45rpx;
+  margin: 5rpx auto;
+}
+.video-control .video-toggle {
+  width:350rpx;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video-control .video-toggle .video-prev,
+.video-control .video-toggle .video-next{
+  width: 45rpx;
+  height: 45rpx;
+}
+.video-control .video-circle{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  background-color: #f97363;
+}
+.video-control .video-circle image {
+  width:63rpx;
+  height:63rpx;
+  position:relative;
+  left:32rpx;
+  top:25rpx;
+  border-radius:50%;  
+}
+.videoCircieImageLeft {
+  left:26rx;
+}
+/*
+  * 订阅专辑
+*/
+.example {
+  width: 100%;
+  height: 124rpx;
+  display: block;
+  display: inline-block;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.example image {
+  width: 90rpx;
+  height: 90rpx;
+  margin:17rpx 10rpx 0 0;
+  background-color: #000;
+  border-radius: 10rpx;
+}
+.example .example-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline-block;
+}
+.example .example-title text{
+  display: block;
+}
+.example .example-title .example-title-detail {
+  font-size: 0.7rem;
+  color:#383838;
+}
+.example .example-title .example-title-main {
+  font-size: 0.9rem;
+  color:#999;
+}
+.example .example-right {
+  float: right;
+  border-radius: 60rpx;
+  background-color: #ffece8;
+  font-size:0.7rem;
+  padding:10rpx 15rpx;
+  text-align: center;
+  margin:30rpx 10rpx 0 0;
+  color: #f86440;
+}
+
+
+
+
+
+
+
