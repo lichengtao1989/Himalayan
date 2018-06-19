@@ -1,0 +1,198 @@
+<view class="container">
+  <view class="header">
+    <view class="install">
+      <image src="../images/personal/邮件.png"></image>
+      <image src="../images/personal/设置.png"></image>
+    </view>
+    <view class="header-user">
+        <!-- <open-data type="userAvatarUrl"class="via" style="margin-right: 10rpx;vertical-align: middle;width:80rpx; height: 80rpx;"></open-data>
+        <open-data type="userNickName" class="username"></open-data> -->
+      <view class="userInfo">
+        <view class="image-userInfo">
+            <open-data type="userAvatarUrl"  style="margin-right: 10rpx;vertical-align: middle;width:80rpx; height: 80rpx;"></open-data>
+        </view>
+        <view class="usernameInfo">
+          <view class="username"><open-data type="userNickName" class="username"></open-data></view>
+          <view class="userdetail">
+            <text class="">粉丝37</text>
+            <text>关注45</text>
+          </view>
+        </view>
+      </view>
+      <text class="listen-time">累计收听<text style="color:black;padding:0 10rpx;">375</text>小时 </text>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="lists">
+    <view class="list1">
+      <view class="list">
+        <text>12</text>
+        <text>已购</text>
+      </view>
+      <view class="list">
+          <text>3</text>
+          <text>优惠券</text>
+      </view>
+      <view class="list">
+          <text>24</text>
+          <text>喜点</text>
+      </view>
+      <view class="list">
+          <text>1</text>
+          <text>直播喜钻</text>
+      </view>
+      <view class="list">
+          <text>$97</text>
+          <text>我的钱包</text>
+      </view>
+    </view>
+  </view>
+  <view class="lists lists2">
+    <view class="list1">
+      <view class="list">
+        <image src="../images/personal/录音.png"></image>
+        <text style="color:#f86442;">我要录音</text>
+      </view>
+      <view class="list">
+        <image src="../images/personal/我要直播.png"></image>
+        <text>我要直播</text>
+      </view>
+      <view class="list">
+          <image src="../images/personal/我的作品.png"></image>
+        <text>我的作品</text>
+      </view>
+      <view class="list">
+          <image src="../images/personal/主播工作台.png"></image>
+        <text>主播工作台</text>
+      </view>
+    </view>
+  </view>
+  <!-- 更多列表 -->
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">分享赚钱</view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的积分</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">免流量服务</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">扫一扫</view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">夜间模式</view>
+        <switch checked />
+    </navigator>
+  </view>
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../images/personal/积分.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">帮助与反馈</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+
+
+<!-- 
+<view class="page">
+  <view class="page__hd">
+      <view class="page__title">List</view>
+      <view class="page__desc">列表</view>
+  </view>
+  <view class="page__bd">
+      <view class="weui-cells__title">带说明的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">标题文字</view>
+              <view class="weui-cell__ft">说明文字</view>
+          </view>
+      </view>
+
+      <view class="weui-cells__title">带图标、说明的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__hd">
+                  <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+              </view>
+              <view class="weui-cell__bd">标题文字</view>
+              <view class="weui-cell__ft">说明文字</view>
+          </view>
+          <view class="weui-cell">
+              <view class="weui-cell__hd">
+                  <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+              </view>
+              <view class="weui-cell__bd">标题文字</view>
+              <view class="weui-cell__ft">说明文字</view>
+          </view>
+      </view>
+
+      <view class="weui-cells__title">带跳转的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+      </view>
+
+      <view class="weui-cells__title">带说明、跳转的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+          </navigator>
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+          </navigator>
+      </view>
+
+      <view class="weui-cells__title">带图标、说明、跳转的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                  <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+              </view>
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+          </navigator>
+          <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                  <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+              </view>
+              <view class="weui-cell__bd">cell standard</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+          </navigator>
+      </view>
+  </view>
+</view> -->

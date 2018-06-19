@@ -1,0 +1,740 @@
+<view class="warpper">
+    <view class="container">
+      <!-- 头部公有 -->
+      <view class="header">
+        <view class="login">登录</view>
+        <view class="input"><input type="text" placeholder="紫禁 | 军婚 | 天涯明月刀" class="search-input" style="text-indent: 10px;color:#333;" focus/></view>
+        <image src="../images/classify/timer.png" class="timer-image" style="width: 40rpx;height: 40rpx;"></image>
+        <image src="../images/classify/download.png" class="timer-image" style="width: 40rpx;height: 40rpx;"></image>
+      </view>
+      <view class="navbar">
+        <view class="classify" catchtap="handleChange" data-index="1">分类</view>
+        <view class="recommend" data-index="2" catchtap="handleChange">推荐</view>
+        <view data-index="3" catchtap="handleChange">精品</view>
+        <view class="directSeeding" data-index="4" catchtap="handleChange">直播</view>
+        <view class="broadcast" data-index="5" catchtap="handleChange">广播</view>
+        <view class="borderBottomMove" style="left:{{navLeft}}rpx"></view>
+        <!-- left: 180rpx;
+        left:345rpx;
+        left: 510rpx;
+        left: 675rpx; -->
+      </view>
+      <swiper class="swiper-warrper swiper-choice"  current="{{current}}" bindchange="pageChange">
+       <!-- 分类 -->
+        <swiper-item class="swiper-item1" catchChange="pageChange">
+            <scroll-view class="scroll-warpper" scroll-y="true">
+                <view class="warpperFirst">
+                    <view class="content">
+                      <!-- 历史记录 -->
+                      <view class="history">
+                        <view class="recently">最近浏览</view>
+                        <view>悬疑</view>
+                        <view>头条</view>
+                        <view>直播</view>
+                      </view>
+                      <!-- 列表头部 -->
+                      <view class="list list-bottom">
+                        <view class="list-title">
+                          <image src="../images/classify/sound.png" class="icon"></image><text>有声小说</text>
+                        </view>
+                        <view class="list-romance">社科</view>
+                        <view class="list-suspense">经管</view>
+                        <view class="list-urban">文学</view>
+                      </view>
+                      <view class="list list-bottom">
+                        <view class="list-title">
+                          <image src="../images/classify/book.png" class="icon"></image><text>畅销书</text>
+                        </view>
+                        <view class="list-romance">社科</view>
+                        <view class="list-suspense">经管</view>
+                        <view class="list-urban">文学</view>
+                      </view>
+                      <view class="list list-bottom">
+                        <view class="list-title">
+                          <image src="../images/classify/boy.png" class="icon"></image><text>儿童</text>
+                        </view>
+                        <view class="list-romance">故事</view>
+                        <view class="list-suspense">卡通</view>
+                        <view class="list-urban">儿歌</view>
+                      </view>   
+                      <!-- 细分列表 -->
+                      <view class="entertainment">
+                        <view class="sw-title">娱乐</view>
+                        <view class="sw-lists">
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/music.png"  class="icon"></image><text>音乐</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/Fan.png" class="icon"></image><text>相声评书</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/smell.png" class="icon" ></image><text>段子</text>
+                            </view>
+                          </view>
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/news.png" class="icon" ></image><text>头条</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/quadratic.png" class="icon" ></image><text>二次元</text>
+                            </view>
+                            <view class="sw-list-title">
+                                <image src="../images/classify/mask.png" class="icon" ></image><text>戏曲</text>
+                              </view>
+                          </view>
+                          <view class="sw-list">
+                          <view class="sw-list-title">
+                            <image src="../images/classify/love.png" class="icon" ></image><text>娱乐</text>
+                          </view>
+                          <view class="sw-list-title">
+                            <image src="../images/classify/love.png" class="icon" ></image><text>情感生活</text>
+                          </view>
+                          <view class="sw-list-title">
+                            <image src="../images/classify/video.png" class="icon" ></image><text>影视</text>
+                          </view>
+                        </view>
+                        </view>
+                      </view>
+                      <view class="entertainment">
+                        <view class="sw-title">知识</view>
+                        <view class="sw-lists">
+                            <view class="sw-list">
+                              <view class="sw-list-title">
+                                <image src="../images/classify/book1.png" class="icon" ></image><text>历史</text>
+                              </view>
+                              <view class="sw-list-title">
+                                <image src="../images/classify/money.png" class="icon" ></image><text>商业财经</text>
+                              </view>
+                              <view class="sw-list-title">
+                                <image src="../images/classify/brust.png" class="icon" ></image><text>人文</text>
+                              </view>
+                            </view>
+                          <view class="sw-list">
+                              <view class="sw-list-title">
+                                <image src="../images/classify/english.png" class="icon" ></image><text>英语</text>
+                              </view>
+                              <view class="sw-list-title">
+                                <image src="../images/classify/history.png" class="icon" ></image><text>教育培训</text>
+                              </view>
+                              <view class="sw-list-title">
+                                  <image src="../images/classify/science.png" class="icon" ></image><text>IT科技</text>
+                                </view>
+                          </view>
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/leaf.png" class="icon" ></image><text>诗歌</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/education.png" class="icon" ></image><text>国学书院</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/world.png" class="icon" ></image><text>小语种</text>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="entertainment">
+                          <view class="sw-title">生活</view>
+                          <view class="sw-lists">
+                              <view class="sw-list">
+                                <view class="sw-list-title">
+                                  <image src="../images/classify/tourism.png" class="icon" ></image><text>旅游</text>
+                                </view>
+                                <view class="sw-list-title">
+                                  <image src="../images/classify/tea.png" class="icon" ></image><text>健康养生</text>
+                                </view>
+                                <view class="sw-list-title">
+                                  <image src="../images/classify/Perfume.png" class="icon" ></image><text>时尚生活</text>
+                                </view>
+                              </view>
+                          </view>
+                      </view>
+                      <view class="entertainment">
+                        <view class="sw-title">特色</view>
+                        <view class="sw-lists">
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/gift.png" class="icon" ></image><text>付费精品</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/radioStation.png" class="icon" ></image><text>广播剧</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/cantonese.png" class="icon" ></image><text>粤语 </text>
+                            </view>
+                          </view>
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/law.png" class="icon" ></image><text>法律课堂</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/tv.png" class="icon" ></image><text>电台</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/political.png" class="icon" ></image><text>党团课</text>
+                            </view>
+                          </view>
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/brand.png" class="icon" ></image><text>品牌之声</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/3d.png" class="icon"></image><text>3D体验馆</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/overt.png" class="icon" ></image><text>名校公开课</text>
+                            </view>
+                          </view>
+                          <view class="sw-list">
+                            <view class="sw-list-title">
+                              <image src="../images/classify/location.png" class="icon" ></image><text>听南昌</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/liveTelecast.png" class="icon" ></image><text>直播</text>
+                            </view>
+                            <view class="sw-list-title">
+                              <image src="../images/classify/car.png" class="icon" ></image><text>汽车</text>
+                            </view>
+                          </view>
+                          <view class="sw-list">
+                              <view class="sw-list-title" style="border-bottom: 1rpx solid #fff;">
+                                <image src="../images/classify/art.png" class="icon" ></image><text>艺术</text>
+                              </view>
+                            </view>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="footer" style="height: 456rpx;">
+                      <swiper class="swiper"  autoplay="true" interval="4000" duration="400" style="height: 150px;">    
+                        <block wx:for="{{swiperCl}}" wx:for-index="index" wx:key="*this">    
+                          <swiper-item>
+                            <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+                          </swiper-item>
+                        </block>    
+                      </swiper>
+                    </view>
+                </view>
+              </scroll-view>       
+        </swiper-item>
+         <!-- 推荐 -->
+         <swiper-item class="swiper-item2">
+          <scroll-view class="scroll-warpper" scroll-y="true">
+            <view class="warpperFirst">
+              <view class="content">
+                <swiper class="swiper" autoplay="true" interval="4000" duration="400">    
+                  <block wx:for="{{swiperRe}}" wx:for-index="index" wx:key="*this">    
+                    <swiper-item>
+                      <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+                    </swiper-item>
+                  </block>
+                </swiper>
+                <!-- 主要数据 -->
+                <view class="choice-menu-warpper">
+                  <view class="choice-menu">
+                    <block wx:for="{{choiceIcon1}}" class="choice-menu__block" wx:for-item="item" wx:key="*this">
+                      <navigator class="menu-warpper__nav" url="{{item.navUrl}}">
+                        <view class="menu-image"  style="background-color:{{item.backgroundColor}}">
+                            <image src="{{item.imageUrl}}" class="icon2"></image>
+                        </view>
+                        <text>{{item.title}}</text>
+                      </navigator>
+                    </block>
+                  </view>
+                  <view class="choice-menu" style="border-bottom: 1rpx solid #f8f8f8">
+                      <block wx:for="{{choiceIcon2}}" class="choice-menu__block" wx:for-item="item" wx:key="*this">
+                        <navigator class="menu-warpper__nav" url="{{item.navUrl}}">
+                          <view class="menu-image" style="background-color:{{item.backgroundColor}}">
+                              <image src="{{item.imageUrl}}" class="icon2"></image>
+                          </view>
+                          <text style="">{{item.title}}</text>
+                        </navigator>
+                      </block>
+                  </view>
+                  <view class="choice-quickNew">
+                    <view class="quickNew">
+                      <image src="../images/recommend/快报.jpg" style="width:80%;height:80%;border-radius: 50%;margin-top:10rpx;"></image>
+                    </view>
+                    <view class="quickNewWarrper">
+                      <view class="quickNew-title" style="float: left;">连续三天每天俩斤 女子暴食小龙虾得这病</view>
+                      <view class="quickNew-more" style="float: right;">
+                        <image src="../images/recommend/更多.png" style="float: right;margin-right: 10rpx;width: 30rpx;height: 30rpx;margin-top:29rpx;border-radius: 50%;background-color: #e3e4e5;"></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <!-- 猜你喜欢 -->
+                <view class="choice-guess">
+                  <view class="guess-titleAll">
+                    <view class="guess-title">猜你喜欢</view>
+                    <view class="guess-images-click"><image src="../images/recommend/靶子.png" class="icon3"></image></view>
+                    <view class="guess-click"><text>点我猜更准</text></view>
+                    <view class="guess-more">更多</view>
+                  </view>
+                  <view class="guess-example">
+                    <view class="guess-example__warpper">
+                      <block wx:for="{{guessImg}}" wx:for-item="item" wx:key="*this">
+                        <navigator class="guess-images-warp" url="{{item.navUrl}}">
+                            <view class="guess-images">
+                              <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>
+                            </view>
+                            <text>{{item.title}}</text>
+                        </navigator>                          
+                      </block>
+                      <view class="renovate"> 
+                        <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                        <text>换一批</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <!-- 精品 -->
+                <view class="FineQuality">
+                    <view class="guess-titleAll">
+                      <view class="guess-title">精品</view>
+                      <view class="guess-more">更多</view>
+                    </view>
+                    <view class="guess-example">
+                      <view class="guess-example__warpper">
+                        <block wx:for="{{3}}" wx:for-item="item" wx:key="*this">
+                          <navigator class="guess-images-warp" url="{{item.navUrl}}">
+                              <view class="guess-images">
+                                <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>
+                                <view class="FineQualityBac">
+                                  <image class="FineQuality-icon" src="../images/recommend/皇冠.png"></image>
+                                </view>
+                              </view>
+                              <text>{{item.title}}</text>
+                              <text>{{item.detail}}</text>
+                          </navigator>                          
+                        </block>
+                        <view class="renovate"> 
+                          <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                          <text>换一批</text>
+                        </view>
+                      </view>
+                    </view>
+                </view>
+                <!-- 最热有声书 -->
+                <view class="hotBooks">
+                  <view class="guess-titleAll">
+                    <view class="guess-title">最热有声书</view>
+                    <view class="guess-more">更多</view>
+                  </view>
+                  <view class="hotBooks-classify">
+                    <view class="item">武侠</view>
+                    <view class="item">女生最爱</view>
+                    <view class="item">都市</view>
+                    <view class="item">幻想</view>
+                  </view>
+                  <view class="hotBooks-lists">
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="renovate"> 
+                      <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                      <text>换一批</text>
+                    </view>
+                  </view>
+                </view>
+                <!-- 头条 -->
+                <view class="topLine">
+                  <view class="guess-titleAll">
+                    <view class="guess-title">头条</view>
+                    <view class="guess-more">更多</view>
+                  </view>
+                  <view class="hotBooks-lists">
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="renovate"> 
+                      <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                      <text>换一批</text>
+                    </view>
+                  </view>
+                </view>
+                <!-- 广告 -->
+                <view class="choice-ad">
+                  <image src="../images/recommend/ad1.jpg"></image>
+                  <view>广告</view>
+                  <text>晓雅Mini AI 音响</text>
+                  <text>晓雅Mini全新上市,为孩子把名师请回家</text>
+                </view>
+                <!-- 懒人电台 -->
+                <view class="lazyRadio">
+                  <view class="guess-titleAll">
+                    <view class="guess-title">懒人电台</view>
+                    <view class="guess-more">更多</view>
+                  </view>
+                  <view class="lazyRadio-items">
+                    <view class="lazyRadio-item">
+                      <image src="../images/recommend/音乐.jpg" class="lazyRadioImg"></image>
+                      <image src="" class="lazyRadioImgPause"></image>
+                      <text>音乐随身听</text>
+                    </view>
+                    <view class="lazyRadio-item">
+                      <image src="../images/recommend/科技.jpg" class="lazyRadioImg"></image>
+                      <image src="" class="lazyRadioImgPause"></image>
+                      <text>科技商业快讯</text>
+                    </view>
+                    <view class="lazyRadio-item">
+                      <image src="../images/recommend/专注与睡眠.jpg" class="lazyRadioImg"></image>
+                      <image src="" class="lazyRadioImgPause"></image>
+                      <text>专注与助眠</text>
+                    </view>
+                  </view>
+                  <view class="renovate"> 
+                    <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                    <text>换一批</text>
+                  </view>
+                </view>
+                <!-- 为你推荐 -->
+                <view class="recommendFY">
+                  <view class="guess-titleAll">
+                    <view class="guess-title">为你推荐</view>
+                  </view>
+                  <view class="hotBooks-lists">
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">老公宠上瘾</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="item">
+                      <view class="hotBooks-left__image">
+                        <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+                      </view>
+                      <view class="hotBooks-right">
+                        <view class="hotBooks__title" style="color:#333;">你的月亮我的心</view>
+                        <view class="hotBooksF" style="color:#999;">当小宝宝一样宠着，甜宠至极</view>
+                        <view class="detailS">
+                          <image src="../images/recommend/播放.png" class="play-icon"></image>
+                          <text>1.2万</text>
+                          <image src="../images/recommend/波形图.png" class="play-icon"></image>
+                          <text>653集</text>
+                        </view>
+                      </view>
+                    </view>
+                    <view class="getMore" style="text-align: center;margin: 12rpx auto;font-size: 0.9em;height:180rpx;">
+                      <text>向上轻拉获取更多</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      <!-- 精品 -->
+        <swiper-item class="swiper-item2">
+          <scroll-view class="scroll-warpper" scroll-y="true">
+            <view class="warpperFirst">
+              <view class="content">
+                <swiper class="swiper" autoplay="true" interval="4000" duration="400">    
+                  <block wx:for="{{swiperRe}}" wx:for-index="index" wx:key="*this">    
+                    <swiper-item>
+                      <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+                    </swiper-item>
+                  </block>
+                </swiper>
+                <!-- 主要数据 -->
+                <view class="precision">
+                    <view class="scroll_box"> 
+                      <scroll-view class="scroll-view_x" scroll-x="true">
+                        <view class="item_list" wx:for="{{choiceIcon3}}" wx:for-item="item" wx:key="*this">
+                            <view class="menu-image" style="background-color:{{item.backgroundColor}};">
+                                <image src="{{item.imageUrl}}" class="icon2"></image>
+                            </view>
+                            <text>{{item.title}}</text>
+                        </view>
+                      </scroll-view>
+                    </view> 
+                </view>
+                <!-- 热门新品 -->
+                <view class="FineQuality">
+                    <view class="guess-titleAll">
+                      <view class="guess-title">热门新品</view>
+                      <view class="guess-more">更多</view>
+                    </view>
+                    <view class="guess-example">
+                      <view class="guess-example__warpper">
+                        <block wx:for="{{3}}" wx:for-item="item" wx:key="*this">
+                          <navigator class="guess-images-warp" url="{{item.navUrl}}">
+                              <view class="guess-images">
+                                <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>
+                              </view>
+                              <text>{{item.title}}</text>
+                              <text>{{item.detail}}</text>
+                          </navigator>                          
+                        </block>
+                        <view class="renovate"> 
+                          <image class="renovate-icon" src="../images/recommend/renovate.png"></image>
+                          <text>换一批</text>
+                        </view>
+                      </view>
+                    </view>
+                </view>
+                <!-- 免费精品好客 -->
+                <view class="FineQuality freeQualityGoods">
+                    <view class="guess-titleAll">
+                      <view class="guess-title">免费精品好课</view>
+                      <view class="guess-more">更多</view>
+                    </view>
+                    <view class="guess-example">
+                      <view class="guess-example__warpper">
+                        <block wx:for="{{3}}" wx:for-item="item" wx:key="*this">
+                          <navigator class="guess-images-warp" url="{{item.navUrl}}">
+                              <view class="guess-images">
+                                <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>
+                                <view class="FineQualityBac">
+                                  <image class="FineQuality-icon" src="../images/recommend/皇冠.png"></image>
+                                </view>
+                              </view>
+                              <text class="FineQualityText1">199<text>喜点</text></text>
+                              <text class="FineQualityText2">会员免费</text>
+                          </navigator>                          
+                        </block>
+                      </view>
+                    </view>
+                </view>  
+                <!-- 免费精品有声书 -->
+                <view class="FineQuality freeQualityGoods">
+                    <view class="guess-titleAll">
+                      <view class="guess-title">免费精品有声书</view>
+                      <view class="guess-more">更多</view>
+                    </view>
+                    <view class="guess-example">
+                      <view class="guess-example__warpper">
+                        <block wx:for="{{3}}" wx:for-item="item" wx:key="*this">
+                          <navigator class="guess-images-warp" url="{{item.navUrl}}">
+                              <view class="guess-images">
+                                <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>
+                              </view>
+                              <view class="FineQualityBac">
+                                <image class="FineQuality-icon" src="../images/recommend/皇冠.png"></image>
+                              </view>
+                              <text  class="FineQualityText1">0.38<text>喜点/集</text></text>
+                              <text class="FineQualityText2">会员免费</text>
+                          </navigator>                          
+                        </block>
+                      </view>
+                    </view>
+                </view>     
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      <!-- 直播 -->
+        <swiper-item class="swiper-item2 directSeeding-item">
+          <scroll-view class="scroll-warpper" scroll-y="true">
+            <view class="warpperFirst">
+              <view class="content" style="height: 100%;">
+                <view class="reinfecta" style="display: flex;justify-content:center;flex-direction: column;align-items: center;height:100%;">
+                    <image src="../images/recommend/lazy.jpg" class="girl-match"></image>
+                    <text style="height:30rpx;color:#fff">懒，不写</text>
+                </view>    
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  

@@ -1,0 +1,148 @@
+/**index.wxss**/
+/*
+  * 分类页面
+  *
+*/
+page{
+
+  background-color: #f8f8f8; 
+  font-size: 27rpx; 
+  height: 100%; 
+  width: 100%; 
+  color:#333; 
+  overflow: hidden;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.warpper{height: 100%; width: 100%; -webkit-font-smoothing:antialiased;}
+.container{display: block; margin: 0; height: 100%; width: 100%; position: relative;}
+
+image.icon{width: 40rpx; height: 40rpx; margin: 10rpx;}
+.header{
+  background-color: #fff;
+  padding:0 20rpx; height: 80rpx; display: flex; justify-content:space-between; align-items: center;}
+.header .login{font-weight: 600; color:#666;}
+.header .input{
+  border-radius: 50px; 
+  width: 60%; 
+  background-color: #f8f8f8; text-indent: 40rpx; padding:5rpx 20rpx; font-size: 0.7rem;}
+
+.navbar{height: 73rpx; padding:0 20rpx; display: flex; color:#333333; justify-content:space-between; align-items: center; background-color: #f3f4f5;font-weight: 500;}
+.borderBottomMove{
+  position: absolute;
+  left: 15rpx;
+  /* left: 180rpx; */
+  /* left:345rpx; */
+  /* left: 510rpx; */
+  /* left: 675rpx; */
+  top: 148rpx;
+  width: 65rpx;
+  height: 5rpx;
+  transition: all 0.3s ease;
+  background-color: #f86442;
+}
+/*
+  * 分类
+  * 
+*/
+.history{padding:0 20rpx; background-color: #f8f8f8; display: flex; justify-content: space-between; align-items: center; height:111rpx; margin-top: 1rpx solid #fff;}
+.history view{box-sizing: border-box; padding: 15rpx 50rpx; background-color: #fff; border-radius: 40rpx;}
+.history .recently{padding:0; background-color: #f8f8f8; color:#999;}
+
+.list{background-color: #fff; margin-top: 1rpx solid #fff; overflow: hidden; display: flex; justify-content: space-between; align-items: center;}
+.list-bottom{margin-bottom: 15rpx;}
+.list>view{float: left; width: 25%; text-align: center; line-height: 94rpx; border-right:1rpx solid #f8f8f8;}
+.list-title{display: flex; justify-content: center; align-items: center; box-sizing: border-box;}
+swiper-item1 image{width: 40rpx; height: 40rpx; margin: 10rpx;}
+.sw-title{margin:20rpx; padding-left:10rpx; font-size: 0.8em; color: #878787;}
+.sw-title:before{content: ''; border-left: 4rpx solid #f86442; margin-right: 10rpx;}
+.sw-list{display: flex; justify-content: space-between; background-color: #fff; align-items: center; line-height: 94rpx; -webkit-box-flex: 1;}
+.sw-list-title{display: flex; justify-content:flex-start; padding-left: 20rpx; box-sizing: border-box; border-right:1rpx solid #f8f8f8; border-bottom: 1rpx solid #f8f8f8; align-items: center; width: 33.3333333%;}
+.swiper-warrper{display: block; position: relative !important;left: 0;right: 0;bottom: 0;height:100%;}
+.scroll-warpper{position: absolute; top:153rpx; left: 0; right: 0; bottom: 0;top:0rpx;}
+::-webkit-scrollbar{width: 0; height: 0; color: transparent;}
+.slide-image{width: 100%;}
+.footer {height: 456rpx;}
+
+/*
+  * 推荐页面
+  * 
+*/
+.choice-menu-warpper{padding: 10rpx 20rpx;overflow: hidden;background-color: #fff;}
+.choice-menu{display: block;width: 100%;overflow: hidden;padding: 20rpx 0;width: 100%;float: left;}
+image.icon2{width: 40rpx;height: 40rpx;display: block;position: relative;left: 13rpx;top:12rpx;}
+image.icon3{width: 40rpx;height: 40rpx;display: block;position: relative;left: 12rpx;}
+.menu-warpper__nav{text-align: center;float: left;width: 20%;}
+.menu-image{width: 62.5rpx;height: 62.5rpx;border-radius: 50%;margin:7rpx auto;}
+/*快报*/
+.choice-quickNew{clear: both; height: 82rpx; width: 100%;}
+.choice-quickNew .quickNew{line-height: 82rpx; width: 100rpx; height: 100%; vertical-align: middle; float: left;}
+.quickNewWarrper{line-height: 82rpx; overflow: hidden;}
+/*猜你喜欢*/
+.choice-guess,.FineQuality{margin-top:15rpx; padding: 0 20rpx; display: block; background-color: #fff;}
+.guess-titleAll{width: 100%; height: 80rpx; overflow: hidden; line-height: 80rpx;}
+.guess-titleAll .guess-title{float: left; color:#111; font-weight: 600;}
+.guess-titleAll .guess-click{float: left; font-size: 0.9em; color:#f86442; margin-left:10rpx; margin-top: 3rpx; text-indent: 10rpx;}
+.guess-titleAll .guess-images-click{float: left; line-height: 84rpx; margin-top:20rpx;}
+.guess-titleAll .guess-more{float: right; color: #666; margin-right:10rpx;}
+.guess-titleAll .guess-more:after{content: ''; position: relative; display: inline-block; height: 12rpx; width: 12rpx; border-width: 4rpx 4rpx 0 0; border-color: #adadad; border-style: solid; transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);}
+.guess-example{overflow: hidden;}
+.guess-example__warpper{display: flex; justify-content: space-between; align-items: flex-start; flex-direction: row; flex-wrap: wrap;}
+.guess-images-warp{width:224rpx; margin-bottom: 18rpx; position: relative;}
+.guess-example__warpper .guess-images{background-color: #e3e4e5; width: 224rpx; height: 224rpx; margin: 10rpx 0; border-radius: 10rpx;}
+.renovate{width: 155rpx; background-color: #ffece8; height: 56.25rpx; border-radius: 50rpx; display: flex; justify-content:center; align-items: center; color:#f86442; margin: 5rpx auto 20rpx;}
+.renovate .renovate-icon{width: 35rpx; height: 35rpx; margin-right:10rpx;}
+.FineQuality-icon{width: 18rpx; height: 18rpx; position: absolute; left: -35rpx; top:5rpx; transform: rotate(-45deg);}
+.FineQualityBac{width: 0; height: 0; border-left:40rpx solid #ff4612; border-bottom:40rpx solid transparent; position: absolute; left: 0; top: 10rpx;}
+.hotBooks{background-color: #fff; display: block; padding: 0 20rpx; margin-top: 15rpx;}
+.hotBooks-classify{height: 100rpx; width: 100%; display: flex; justify-content: flex-start; align-items: center;}
+.hotBooks-classify .item{padding: 10rpx 20rpx; border:1rpx solid #8a8a8a; border-radius: 50rpx; color: #adadad; margin: 0 15rpx 0 0 ;}
+.hotBooks-lists{overflow: hidden;}
+.hotBooks-lists .item{display: flex; justify-content: flex-start; font-size: 1.1em; padding: 0 0 10rpx 0;}
+.hotBooks-lists .hotBooks-left__image{float: left; background-color: #e3e4e5; border-radius: 4rpx;}
+.hotBooks-lists .item .hotBooks-right{margin-left:25rpx; padding: 0 0 10rpx 0; width: 80%; border-bottom:1rpx solid #eaeaea; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .hotBooks__title,
+.hotBooks-right .hotBooksF{overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+.hotBooks-right .detailS{color:#999; font-size: 0.8em; display: flex; justify-content: flex-start; align-self: center; margin-top: 10rpx;}
+.hotBooks-right .detailS text{margin:0 30rpx 0 10rpx;}
+.play-icon{width: 27rpx; height: 27rpx;}
+/*头条*/
+.topLine{padding: 0 20rpx; background-color: #fff; margin-top:15rpx; position: relative;}
+.choice-ad{box-sizing: border-box; width: 100%; padding: 20rpx 20rpx; background-color: #fff; margin-top: 15rpx; position: relative;}
+.choice-ad view{position: absolute; top: 240rpx; color:#fff; padding:2rpx; font-size: 0.8em; background-color: rgba(255, 255, 255, 0.5);}
+.choice-ad image{width: 100%; height: 250rpx;}
+.choice-ad text{display: block;}
+.choice-ad text:nth-last-child(2){color:#333;}
+.choice-ad text:nth-last-child(1){color:#999; font-size: 0.8em;}
+/*懒人电台*/
+.lazyRadio{padding: 10rpx 20rpx; background-color: #fff; width: 100%; margin-top: 15rpx; box-sizing: border-box;}
+.lazyRadio .lazyRadio-items{display: flex; justify-content:space-around; align-items: center; margin-bottom: 20rpx;}
+.lazyRadio .lazyRadio-item{display: flex; flex-direction: column; align-items: center; justify-content: flex-start; position: relative; width: 170rpx;}
+.lazyRadio .lazyRadio-item .lazyRadioImg{width: 131rpx; height: 131rpx; border-radius: 50%;}
+.lazyRadio .lazyRadio-item .lazyRadioImgPause{position: absolute; width: 0; height: 0; border-width: 15px; border-style: solid; border-color: rgba(255,255,255,0.6) transparent transparent transparent; border-radius: 30rpx; top:40rpx; left: 70rpx; transform: rotate(-90deg);}
+.lazyRadio .lazyRadio-item text{margin-top:10rpx; color:#333;}
+/*为你推荐*/
+.recommendFY{margin-top: 15rpx; padding:10rpx 20rpx; background-color: #fff; display: block;}
+
+/*
+  * 精品 precision
+  *
+*/
+.precision{text-align:center; width: 100%;}
+.scroll_box{padding:10rpx 10rpx; width: 100%; background-color: #fff;}
+.scroll-view_x{overflow: hidden; white-space: nowrap; width: 100%; display: flex;}
+.item_list{width: 110rpx; margin-right: 23rpx; display: inline-block;}
+/*免费精品好课*/
+.FineQualityText1{color:#fc6441; font-size: 1.2em; margin-right:7rpx;}
+.FineQualityText1 text{color:#b3b3b3; padding-left:10rpx; font-size: 0.7em;}
+.FineQualityText2{width:90rpx; height: 30rpx; font-size: 0.7em; color: #fff; background-color: #c1782a; display: block; text-align: center; margin-top:10rpx; border-radius: 7rpx;}
+
+/*
+  *直播
+  *
+*/
+.directSeeding-item {display: flex;justify-content: center;align-items: center;}
+.directSeeding-item .warpperFirst {height: 100%;background-color: #BAAA91;}
+.directSeeding-item .girl-match{background-size: 150% 150%;width: 150rpx;height:150rpx;border-radius: 50%;height:100rpx;overflow: hidden;margin:-30rpx 0 60rpx;}
+
+
+
